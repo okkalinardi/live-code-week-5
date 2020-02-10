@@ -30,8 +30,8 @@ class UserController {
             } else {
                 require('dotenv').config()
                 let payload = {
-                    id: userData.id,
-                    email: userData.email
+                    id: userInfo.id,
+                    email: userInfo.email
                 }
                 let token = jwt.sign(payload, process.env.JWT_SECRET)
                 res.status(200).json(token)
