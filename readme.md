@@ -46,7 +46,7 @@ Buatlah endpoint untuk login sesuai dengan ketentuan sebagai berikut:
   - body
     - `{ email: 'd@mail.com', password: '12345' }`
 - response:
-  - `200`: `{ access_token: '...' }`
+  - `200`: `{ token: '...' }`
 
 Gunakan package JWT untuk generate access token.
 
@@ -75,7 +75,7 @@ Tampilkan comic yang kamu dapat dari server ke client (No page refresh ya!).
   - `GET /comics`
 - request
   - headers
-    - `{ access_token }`
+    - `{ token }`
 - response
   - `200`: `[{ objectcomic }, ...]`
 
@@ -90,7 +90,7 @@ sebagai berikut:
   - `PUT /comics/:id`
 - request
   - headers
-    - `{ access_token }`
+    - `{ token }`
 - response
   - `200`: `{ comic: { "title": string, "author": string, "imageURL": string }, message: "success update comic" }`
 
@@ -121,9 +121,9 @@ Buatlah endpoint untuk register dengan ketentuan sebagai berikut:
   - body:
     - `{ name: 'Sukirno', email: 'd@mail.com', password: 'secret' }`
 - response:
-  - `201`: `{ access_token: '...' }`
+  - `201`: `{ token: '...' }`
 
-Jika telah selesai melakukan Register maka endpoint akan mengembalikan access_token
+Jika telah selesai melakukan Register maka endpoint akan mengembalikan token
 
 ### Client - Register
 
